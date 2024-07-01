@@ -3,6 +3,8 @@ import { clamp, range } from "./utils.js";
 
 const LATENCY_THRESHOLD = 300;
 
+const pingButton = document.getElementById("ping-button");
+
 mapboxgl.accessToken =
   "pk.eyJ1IjoiYmhhdmppdGNoYXVoYW4iLCJhIjoiY2x5MG95ejEzMGhuMDJtb2tvb3RpZHMyMiJ9.fJafGFJkITooEewonltjGw";
 
@@ -128,6 +130,6 @@ async function pingRegions(regions, map) {
 }
 
 // TODO: Attach to a proper user interaction
-addEventListener("click", async () => {
+pingButton.addEventListener("click", async () => {
   console.log(await pingRegions(regions, map))
 });
