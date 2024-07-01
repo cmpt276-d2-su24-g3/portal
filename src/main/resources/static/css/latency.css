@@ -8,4 +8,23 @@ body {
   top: 0;
   bottom: 0;
   width: 100%;
+  z-index: -1;
+}
+
+#bottom-bar {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+#ping-button {
+  margin: 15px;
+  padding: 10px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: x-large;
+  box-shadow: 0 3px 5px black;
 }
