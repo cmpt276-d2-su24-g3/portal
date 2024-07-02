@@ -98,4 +98,17 @@ public class UserController {
         return "redirect:/login";
     }
 
+    @GetMapping("/admin")
+    public String getAdmin(Model model, HttpServletRequest request, HttpSession session) {
+        if (session.getAttribute("user") == null)
+            return "redirect:/login";
+        else if (((User) session.getAttribute("user")).getRole() != User.Role.ADMIN)
+            return "redirect:/";
+
+        List<User> users = userRepository.findAll();
+        model.addAttribute("users", users);
+
+        return "admin";
+    }
+
 }
