@@ -10,12 +10,17 @@ import jakarta.persistence.Table;
 @Table(name = "users")
 public class User {
 
+    public static enum Role {
+        ADMIN, USER
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String username;
     // TODO: Don't store passwords in plaintext
     private String password;
+    private Role role;
 
     public User() {
     }
@@ -23,6 +28,13 @@ public class User {
     public User(String username, String password) {
         this.username = username;
         this.password = password;
+        this.role = Role.USER;
+    }
+
+    public User(String username, String password, Role role) {
+        this.username = username;
+        this.password = password;
+        this.role = role;
     }
 
     public long getId() {
@@ -47,6 +59,14 @@ public class User {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public Role getRole() {
+        return role;
+    }
+
+    public void setRole(Role role) {
+        this.role = role;
     }
 
 }
