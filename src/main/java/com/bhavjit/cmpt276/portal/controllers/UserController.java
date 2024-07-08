@@ -1,20 +1,12 @@
 package com.bhavjit.cmpt276.portal.controllers;
 
-import java.util.List;
-import java.util.Map;
-
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import com.bhavjit.cmpt276.portal.models.User;
 import com.bhavjit.cmpt276.portal.models.UserRepository;
-
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpSession;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class UserController {
@@ -22,6 +14,19 @@ public class UserController {
     @Autowired
     private UserRepository userRepository;
 
+    @GetMapping("/")
+    public String home(Model model) {
+
+        return "home";
+    }
+
+    @PreAuthorize("hasRole('ADMIN')")
+    @GetMapping("/admin")
+    public String getAdmin() {
+        return "admin";
+    }
+
+/*
     // TODO: Handle index page elsewhere
     @GetMapping("/")
     public String getIndex(Model model, HttpServletRequest request, HttpSession session) {
@@ -110,5 +115,5 @@ public class UserController {
 
         return "admin";
     }
-
+*/
 }
