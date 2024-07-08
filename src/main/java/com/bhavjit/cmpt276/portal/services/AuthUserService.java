@@ -25,7 +25,7 @@ private static final Logger logger = LoggerFactory.getLogger(AuthUserService.cla
         
         OidcUser oidcUser = super.loadUser(userRequest);
         logger.info("Loading user...");
-        
+
         Map<String, Object> attributes = new HashMap<>(oidcUser.getAttributes());
         logger.info("User attributes: {}", attributes);
 
@@ -39,9 +39,12 @@ private static final Logger logger = LoggerFactory.getLogger(AuthUserService.cla
         logger.info("Cognito groups: {}", groups);
 
         // Convert groups to authorities
-        List<GrantedAuthority> authorities = groups.stream()
+        List<GrantedAuthority> authorities = null;
+        if(groups != null) {
+            authorities = groups.stream()
                 .map(group -> new SimpleGrantedAuthority("ROLE_" + group.toUpperCase()))
                 .collect(Collectors.toList());
+        }
         logger.info("User authorities: {}", authorities);
 
         OidcIdToken idToken = userRequest.getIdToken();
