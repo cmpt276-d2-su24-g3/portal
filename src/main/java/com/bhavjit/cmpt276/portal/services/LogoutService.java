@@ -16,7 +16,7 @@ import org.springframework.web.util.UriComponentsBuilder;
 public class LogoutService {
 
     private static final String CLIENT_ID = "481g1a0ridauh779f34tvsti05";
-    private static final String REVOCATION_ENDPOINT = "https://yyc-portal.auth.us-west-2.amazoncognito.com/oauth2/revoke"; // Replace with your domain
+    private static final String REVOCATION_ENDPOINT = "https://yyc-portal.auth.us-west-2.amazoncognito.com/oauth2/revoke";
 
     static RestClient restClient = RestClient.create();
     public static void logUserOut(String token) {
