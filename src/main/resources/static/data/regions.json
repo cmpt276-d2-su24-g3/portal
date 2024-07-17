@@ -1,21 +1,21 @@
 [
     {
         "code": "us-east-1",
-        "area": "US East",
+        "area": "Americas",
         "name": "N. Virginia",
         "latitude": 38.13,
         "longitude": -78.45
     },
     {
         "code": "us-east-2",
-        "area": "US East",
+        "area": "Americas",
         "name": "Ohio",
         "latitude": 39.96,
         "longitude": -83
     },
     {
         "code": "us-west-1",
-        "area": "US West",
+        "area": "Americas",
         "name": "California",
         "latitude": 37.35,
         "longitude": -121.96
@@ -23,16 +23,9 @@
     {
         "code": "us-west-2",
         "name": "Oregon",
-        "area": "US West",
+        "area": "Americas",
         "latitude": 46.15,
         "longitude": -123.88
-    },
-    {
-        "code": "af-south-1",
-        "area": "Africa",
-        "name": "Cape Town",
-        "latitude": -33.93,
-        "longitude": 18.42
     },
     {
         "code": "ap-east-1",
@@ -107,14 +100,14 @@
     {
         "code": "ca-central-1",
         "name": "Canada Central",
-        "area": "Canada",
+        "area": "Americas",
         "latitude": 45.5,
         "longitude": -73.6
     },
     {
         "code": "ca-west-1",
         "name": "Canada West",
-        "area": "Canada",
+        "area": "Americas",
         "latitude": 51.05011,
         "longitude": -114.08529
     },
@@ -175,30 +168,37 @@
         "longitude": 8.541111
     },
     {
+        "code": "sa-east-1",
+        "name": "São Paulo",
+        "area": "Americas",
+        "latitude": -23.34,
+        "longitude": -46.38
+    },
+    {
+        "code": "af-south-1",
+        "area": "Other",
+        "name": "Cape Town",
+        "latitude": -33.93,
+        "longitude": 18.42
+    },
+    {
         "code": "me-south-1",
         "name": "Bahrain",
-        "area": "Middle East",
+        "area": "Other",
         "latitude": 26.1,
         "longitude": 50.46
     },
     {
         "code": "me-central-1",
         "name": "UAE",
-        "area": "Middle East",
+        "area": "Other",
         "latitude": 24.466667,
         "longitude": 54.366667
     },
     {
-        "code": "sa-east-1",
-        "name": "São Paulo",
-        "area": "South America",
-        "latitude": -23.34,
-        "longitude": -46.38
-    },
-    {
         "code": "il-central-1",
         "name": "Tel Aviv",
-        "area": "Israel",
+        "area": "Other",
         "latitude": 32.08,
         "longitude": 34.78
     }
