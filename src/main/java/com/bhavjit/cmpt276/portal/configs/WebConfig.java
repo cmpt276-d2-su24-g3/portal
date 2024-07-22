@@ -17,7 +17,7 @@ public class WebConfig implements WebMvcConfigurer {
             .allowedOrigins("http://localhost:5173", 
                             "http://aws-yyc-app-client.s3-website-us-west-2.amazonaws.com",
                             "https://dd06gmwf4nvya.cloudfront.net", 
-                            "cmpt276.bhavjit.com")
+                            "https://cmpt276.bhavjit.com")
             .allowedMethods("*")
             .allowedHeaders("*")
             .allowCredentials(true);
