@@ -21,5 +21,6 @@ COPY ./startup.sh startup.sh
 RUN chmod +x startup.sh
 RUN echo "shell /bin/bash" >> /root/.screenrc
 
+EXPOSE 8000
 EXPOSE 8080
 ENTRYPOINT ["/startup.sh"]
