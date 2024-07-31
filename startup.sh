@@ -5,7 +5,7 @@ screen -L -Logfile chatbot.log -dmS $screen_name
 screen -x -S $screen_name -p 0 -X stuff "\
     cd /chatbot && \
         source venv/bin/activate && \
-        uvicorn main:app \
+        uvicorn main:app -- --host 0.0.0.0\
     \n"
 
 screen_name="portal"
